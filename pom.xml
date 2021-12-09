@@ -158,6 +158,9 @@
                     <configuration>
                         <jdkVersion>${heroku.java}</jdkVersion>
                         <appName>${heroku.dev.application}</appName>
+                        <processTypes>
+                            <web>web: java $JAVA_OPTS -jar webapp-runner.jar $WEBAPP_RUNNER_OPTS --port $PORT target/whenmybday.war</web>
+                        </processTypes>
                     </configuration>
                 </plugin>
             </plugins>
